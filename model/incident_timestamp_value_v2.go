@@ -10,7 +10,10 @@ func (incidentTimestampValueV2) Schema() Property {
 	return Property{
 		Types: []string{"object"},
 		Properties: map[string]Property{
-			"value": DateTime.Schema(),
+			"value": {
+				Types:        []string{"string", "null"},
+				CustomFormat: "date-time",
+			},
 		},
 	}
 }

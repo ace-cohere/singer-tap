@@ -11,7 +11,7 @@ func (incidentTimestampWithValueV2) Schema() Property {
 		Types: []string{"object"},
 		Properties: map[string]Property{
 			"incident_timestamp": IncidentTimestampV2.Schema(),
-			"value":              Optional(IncidentTimestampValueV2.Schema()),
+			"value":              IncidentTimestampValueV2.Schema(),
 		},
 	}
 }
